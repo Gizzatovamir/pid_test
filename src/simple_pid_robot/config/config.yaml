@@ -1,0 +1,27 @@
+/field_node:
+    ros__parameters:
+      width: 800
+      height: 600
+      robot_radius: 10
+      goal_radius: 5
+      image_topic: "field"
+
+/robot_node:
+  ros__parameters:
+    x: 400
+    y: 300.0
+    kp_x: 0.6
+    ki_x: 0.005
+    kd_x: 1.2
+    kp_y: 1
+    ki_y: 0.05
+    kd_y: 1.2
+    x_tolerance: 5
+    y_tolerance: 5
+    max_accel: 3
+    dt: 0.5
+    image_topic: 'field'
+  
+/image_viewer:
+  ros__parameters:
+    topic: 'field'
