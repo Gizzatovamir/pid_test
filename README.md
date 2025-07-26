@@ -50,3 +50,6 @@ P.S.
 
 To set a goal pose make sure that rqt_image_view left mouse click check mark is selected
 ![alt text](images/image.png)
+
+# Result
+
