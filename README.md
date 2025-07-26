@@ -53,3 +53,4 @@ To set a goal pose make sure that rqt_image_view left mouse click check mark is 
 
 # Result
 
+[![asciicast](images/image.png)](images/result.avi)
