@@ -1,4 +1,4 @@
-xhost -local:root
+xhost +local:root
 docker run -it \
     --privileged \
     --network="host" \

@@ -46,7 +46,6 @@ class Robot(Node):
                 ('kd_y', 1.2),
                 ('x_tolerance', 5),
                 ('y_tolerance', 5),
-                ('max_accel', 3),
                 ('dt', 0.5),
                 ("image_topic", 'field'),
             ]
@@ -75,7 +74,6 @@ class Robot(Node):
         self.y = self.get_parameter('y').value
         self.x_tolerance = self.get_parameter('x_tolerance').value
         self.y_tolerance = self.get_parameter('y_tolerance').value
-        self.max_accel = self.get_parameter('max_accel').value
         self.dt = self.get_parameter('dt').value
         self.goal_x: int = self.x
         self.goal_y: int = self.y
