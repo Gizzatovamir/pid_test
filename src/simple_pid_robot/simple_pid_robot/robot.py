@@ -48,6 +48,7 @@ class Robot(Node):
                 ('y_tolerance', 5),
                 ('dt', 0.5),
                 ("image_topic", 'field'),
+                ("max_accel", 3.0)
             ]
         )
         self.init_params()
@@ -59,13 +60,13 @@ class Robot(Node):
             kp=self.get_parameter('kp_x').value,
             ki=self.get_parameter('ki_x').value,
             kd=self.get_parameter('kd_x').value,
-            max_output=3.0
+            max_output=self.max_accel
         )
         self.pid_controller_y = PIDController(
             kp=self.get_parameter('kp_y').value,
             ki=self.get_parameter('ki_y').value,
             kd=self.get_parameter('kd_y').value,
-            max_output=3.0
+            max_output=self.max_accel
         )
         
     
@@ -80,6 +81,7 @@ class Robot(Node):
         self.velocity_x = 0
         self.velocity_y = 0
         self.image_topic = self.get_parameter('image_topic').value
+        self.max_accel = self.get_parameter('max_accel').value
 
     def pose_pub_callback(self):
         msg = Point()
